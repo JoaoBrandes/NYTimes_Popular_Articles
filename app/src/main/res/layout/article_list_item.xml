@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_article_title"
+            android:textSize="16sp"
+            android:shadowDx="30"
+            android:shadowDy="30"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:fontFamily="monospace"
+            android:background="#c0c0c0"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_article_pub_date"
+            android:padding="5dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:id="@+id/iv_articlePic"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_article_abstract"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowColor="@color/colorPrimaryDark"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

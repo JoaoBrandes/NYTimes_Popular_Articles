@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NYTimes Articles</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search">Search</string>
+    <string name="search_hint">Search for articles</string>
+    <string name="published_date">Published in</string>
+    <string name="api_key"></string>
+</resources>

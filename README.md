@@ -3,7 +3,9 @@ To use the project, register and request an API key at the developers site of th
 https://developer.nytimes.com/
 
 With the key in hand, simply put it in the strings file, under the api_key variable, like this:
-"<string name="api_key">XXXXXXXXXXX</string>"
+```xml
+<string name="api_key">XXXXXXXXXXX</string>"
+```
 
 Uses the Picasso library to handle image loading
 http://square.github.io/picasso/

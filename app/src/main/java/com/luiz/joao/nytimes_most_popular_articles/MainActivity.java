@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private static final String SEARCH_QUERY_URL_EXTRA = "query";
 
-    private static final int GITHUB_SEARCH_LOADER = 42;
+    private static final int API_SEARCH_LOADER = 42;
 
     private static ArrayList<Article> articlesList = new ArrayList<>();
     private MenuItem searchMenuItem;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             }
         });
 
-        getLoaderManager().initLoader(GITHUB_SEARCH_LOADER, null, this);
+        getLoaderManager().initLoader(API_SEARCH_LOADER, null, this);
     }
 
     @Override
@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         Bundle queryBundle = new Bundle();
         queryBundle.putString(SEARCH_QUERY_URL_EXTRA, newText);
         LoaderManager loaderManager = getLoaderManager();
-        Loader<String> githubSearchLoader = loaderManager.getLoader(GITHUB_SEARCH_LOADER);
+        Loader<String> githubSearchLoader = loaderManager.getLoader(API_SEARCH_LOADER);
         if (githubSearchLoader == null) {
-            loaderManager.initLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
+            loaderManager.initLoader(API_SEARCH_LOADER, queryBundle, this);
         } else {
-            loaderManager.restartLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
+            loaderManager.restartLoader(API_SEARCH_LOADER, queryBundle, this);
         }
     }
 
